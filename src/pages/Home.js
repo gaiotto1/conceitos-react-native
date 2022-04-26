@@ -24,9 +24,7 @@ export function Home() {
   }
 
   useEffect(() => {
-    console.info('teste');
     const currentHour = new Date().getHours();
-    console.log(currentHour);
 
     if (currentHour < 12) {
       setGretting('Good Morning');
@@ -47,7 +45,6 @@ export function Home() {
         placeholder="New skill"
         placeholderTextColor="#555"
         onChangeText={setNewSkill}
-        value={mySkills}
       />
 
       <Button onPress={handleAddNewSkill} />
